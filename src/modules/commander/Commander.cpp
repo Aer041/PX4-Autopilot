@@ -1549,15 +1549,15 @@ Commander::run()
 				}
 
 				/* if the USB hardware connection went away, reboot */
-				if (status_flags.usb_connected && !system_power.usb_connected && shutdown_if_allowed()) {
+                //if (status_flags.usb_connected && !system_power.usb_connected && shutdown_if_allowed()) {
 					/*
 					 * apparently the USB cable went away but we are still powered,
 					 * so lets reset to a classic non-usb state.
 					 */
-					mavlink_log_critical(&mavlink_log_pub, "USB disconnected, rebooting.")
-					px4_usleep(400000);
-					px4_shutdown_request(true, false);
-				}
+                    //mavlink_log_critical(&mavlink_log_pub, "USB disconnected, rebooting.")
+                    //px4_usleep(400000);
+                    //px4_shutdown_request(true, false);
+                //}
 			}
 		}
 
